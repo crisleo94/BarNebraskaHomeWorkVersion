@@ -10,23 +10,15 @@
     margin: 0 auto;
     justify-content: center;
     font-weight: bolder;
+    text-transform: uppercase;
     img {
         margin-top: -40px;
-    }
-    li {
-        border: solid gray 0.5px;
-        margin-right: 5px;
-        height: 60px;
     }
 }
 
 .navegacion {
     height: 200px;
     background-color: #4E5A5A;
-}
-
-#nav-mobile li a:hover {
-    color: #D09F23;
 }
 
 .upBar {
@@ -36,17 +28,6 @@
     align-items: center;
 }
 
-.derecha {
-    text-align: right;
-    /* padding-left: 55%; */
-    font-weight: bold;
-}
-
-.izquierda {
-    margin-left: 19%;
-    font-weight: bold;
-}
-
 .sidenav {
     background-color: #1B1A1B;
 }
@@ -54,11 +35,6 @@
 .sidenav li a {
     color:white !important;
     font-weight: bold !important;
-}
-
-.letraNegrilla{
-    font-weight: bold !important;
-    color: black !important;
 }
 
 .sidenav-trigger {
