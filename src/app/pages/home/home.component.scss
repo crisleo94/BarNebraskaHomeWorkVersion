@@ -1,0 +1,234 @@
+@media (max-width: 500px) {
+    .cdServ {
+        height: 400px !important;
+        background: transparent !important;
+    }
+}
+
+#tusitioIdeal{
+    text-align: center;
+    margin-top: 10%;
+}
+
+#conocenos {
+    min-width: 100px !important;
+    max-width: auto !important;
+}
+
+
+.btnBuscar {
+    width: 250px;
+    height: 50px;
+    background-image: linear-gradient(to right, #E0D2AF, #D09F23);
+    border: none;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+
+.whenPressed:focus {
+    background-image: linear-gradient(to right, black, #C09842);
+    color: white;
+    border: 1px solid #D09F23;
+}
+
+.carousel {
+    height: 400px;
+    position: relative;
+    z-index: 1 !important;
+}
+
+/* .fixed-action-btn {
+    right: auto;
+    left: 20px;
+} */
+
+#blog {
+    margin-top: 5%;
+}
+
+#contacto {
+    margin-top: 10%;
+}
+
+#servicios {
+    margin-top: 10%;
+}
+
+.btnVenta {
+    border: 1px solid #CFB379;
+    background: transparent;
+    color: #D09F23;
+    height: 25px;
+}
+.separador{
+    width: 30%;
+}
+
+.btnArriendo {
+    border: 1px solid #CFB379;
+    background: transparent;
+    
+    color: #D09F23;
+    height: 25px;
+}
+
+.ventasLetras {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.ventasLetras div, input {
+    border: #C09842 solid 1px;
+    padding: 10px;
+    justify-content: center;
+    margin: 35px;
+    height: 40px;
+}
+
+.ventasLetras input {
+    padding: 10px;
+    margin-left: 35px;
+}
+
+.ventasLetras input::placeholder {
+    
+    font-size: 14px;
+    color: white;
+}
+
+.ventasLetras input.palabrasC::placeholder{
+    color: white;
+    font-size: 10px;
+}
+
+.titulosServ {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.contServ {
+    font-size: 12px;
+    color: #807F80;
+    text-align: justify;
+}
+
+.btnUnirme {
+    width: 150px;
+    height: 40px;
+    background: #E1C07D;
+    
+    border: none;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.inputUnirme {
+    background: #807F80 !important;
+    color: #A8A6A8 !important;
+    border: none !important;
+    height: 40px !important;
+}
+
+.box{
+    position: relative;
+    display: inline-block; /* Make the width of box same as image */
+}
+.box .text{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%; /* Adjust this value to move the positioned div up and down */
+    text-align: left;
+    width: 60%; /* Set the width of the positioned div */
+}
+
+.instagram-feed{
+    height: 20%;
+    width: 20%;
+    display: inline-block;
+    padding: 5%
+}
+.card-fondo{
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    background-color: bisque;
+    -webkit-transition: width 0.3s;
+    transition: width 0.3s; 
+    -webkit-transition: height 0.3s;
+    transition: height 0.3s;
+    box-shadow: 0px 15px rgba(0, 0, 0, 0.2) inset;
+}
+
+.card-blog{
+    display: inline-block;
+    height: 400px;
+    width: 80%;
+    -webkit-transition: width 0.3s;
+    transition: width 0.3s; 
+    -webkit-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+.cdServ {
+    display: inline-block;
+    height: 400px;
+    width: 100%;
+    background-image: linear-gradient(#D8C48E, #BEA250 );
+}
+
+
+.cdServ span {
+    font-weight: bolder;
+    color: white;
+}
+
+.cdServ p {
+    font-size: 16px;
+    color: white;
+}
+
+@media (min-width: 500px) {
+    div.unirmeIzquierda {
+        margin-left: -5% !important;
+    }
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.inputContacto {
+    border: #D09F23 solid 1px !important;
+    color: #A8A6A8 !important;
+    background: transparent;
+    height: 30px !important;
+}
+
+.txtContacto {
+    border: #D09F23 solid 1px !important;
+    color: #A8A6A8 !important;
+    height: 100px !important;
+}
+
+.zonaActiva{
+    height: 400px !important;
+    width: 90% !important;
+}
+
+.textoZona{
+    align-content: center !important;
+    align-items: center !important;
+    justify-items: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
