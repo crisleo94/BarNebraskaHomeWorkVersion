@@ -8,6 +8,10 @@ import * as material from '../../../assets/js/materialize.min.js';
 })
 export class NavbarComponent implements OnInit {
 
+  sidenavOptions = {
+    draggable : true,
+  };
+
   constructor() { }
 
   ngOnInit() {
@@ -16,7 +20,7 @@ export class NavbarComponent implements OnInit {
 
   menu() {
     const element = document.querySelectorAll('.sidenav');
-    const instance = material.Sidenav.init(element);
+    const instance = material.Sidenav.init(element, this.sidenavOptions);
   }
 
 }
