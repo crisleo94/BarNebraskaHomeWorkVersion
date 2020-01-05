@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.carousel();
-    this.fab();
+    this.fabButton();
   }
 
   carousel() {
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
     const instance = material.Carousel.init(element, this.carouselOptions);
   }
 
-  fab() {
+  fabButton() {
     const element = document.querySelectorAll('.fixed-action-btn');
     const instance = material.FloatingActionButton.init(element, this.fabOptions);
   }
