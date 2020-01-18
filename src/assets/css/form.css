@@ -1,0 +1,27 @@
+.ng-valid[required], .ng-valid.required {
+    border-left: 5px solid #42A948 !important;
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid #a94442 !important;
+}
+
+.card-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: #C1AA4A !important;
+}
+
+.modal {
+    background-color: #C1AA4A !important;
+    color: #000;
+}
+
+.modal .modal-footer {
+    background-color: #C1AA4A !important;
+    color: #000;
+}

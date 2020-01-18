@@ -135,6 +135,8 @@
           <img src="https://ik.imagekit.io/codeprojects/BarNebraska/logobrighter_pNIXg4PVA.png?tr=w-200&tr=h-200" alt="logoNebraska" />
         </a>
     </div>
+    <!-- FORMULARIO ENVIO OPINIÓN -->
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
     <div class="col s12 m4 l4" style="text-align: center;">
       <p style="font-weight: bold;">
         DÉJANOS SABER TU OPINIÓN <br>
@@ -142,18 +144,54 @@
       </p>
       <div class="row center-align">
         <div class="container col s12 m12 l12" style="margin-top: 30px">
-          <input class="inputUnirme" type="text" placeholder="Correo">
+          <input  class="inputUnirme"
+                  type="email"
+                  placeholder="Correo"
+                  name="email"
+                  required
+                  [(ngModel)]="contact.email"
+                  #email="ngModel">
+          <div [hidden]="email.valid || email.pristine" class="card-panel">
+            <small class="red-text text-darken-3">¡El correo es requerido!</small>
+          </div>
         </div>
-        <div class="container col s12 m12 l12" style="height: 140px;">
-          <textarea class="areaOpinion" rows="30" style="height: 140px; color: white !important;" type="text" placeholder="¿Cómo podemos mejorar nuestro servicio?"></textarea>
+        <div class="container col s12 m12 l12" style="height: 100px;">
+          <textarea class="areaOpinion"
+                    rows="30"
+                    style="height: 100px; color: white !important;"
+                    type="text"
+                    [(ngModel)]="contact.message"
+                    placeholder="¿Cómo podemos mejorar nuestro servicio?"
+                    name="message"
+                    required
+                    #message="ngModel">
+          </textarea>
+          <div [hidden]="message.valid || message.pristine" class="card-panel">
+            <small class="red-text text-darken-3">¡El mensaje es requerido!</small>
+          </div>
         </div>
         <div>
-          <button style="margin-top: 10%;" class="btnUnirme">
+          <button style="margin-top: 10%;"
+                  type="submit"
+                  class="btnUnirme modal-trigger"
+                  [disabled]="contactForm.form.invalid"
+                  data-target="modal1">
             ENVIAR
           </button>
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>Tu opinión ha sido enviada!</h4>
+              <p>Gracias por ayudarnos a mejorar nuestro servicio.</p>
+            </div>
+            <div class="modal-footer">
+              <a   class="modal-close waves-effect waves-green btn-flat">OK</a >
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <!-- Modal Structure -->
+  </form>
     <div class="col s12 m4 l4 center-align">
       <p style="font-weight: bold; text-align: center;">INSTAGRAM FEED</p>
       <!-- SnapWidget -->
