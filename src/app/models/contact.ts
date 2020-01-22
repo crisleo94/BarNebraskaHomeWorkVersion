@@ -1,6 +1,4 @@
-export class Contact {
-    constructor(
-        public email: String,
-        public message: String
-    ) {  }
+export interface Contact {
+    email: '',
+    message: ''
 }

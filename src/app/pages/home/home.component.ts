@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import * as material from '../../../assets/js/materialize.min.js';
-import { Contact } from '../../models/contact'
-import { Observable } from 'rxjs';
+import { SendOpinionService } from 'src/app/services/send-opinion.service.js';
+import { Contact } from 'src/app/models/contact.js';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -20,15 +19,9 @@ export class HomeComponent implements OnInit {
     hoverEnabled: false
   };
 
-  modalOptions = {
-    onCloseEnd: this.onSubmit()
-  }
+  contact: Contact;
 
-  contact = new Contact('', '');
-  API_URI = 'https://api-bar-nebraska.herokuapp.com/savecontact';
-
-  constructor(private http: HttpClient) {
-    console.log(this.contact);
+  constructor(private sendOpinion: SendOpinionService) {
   }
 
   ngOnInit() {
@@ -52,17 +45,12 @@ export class HomeComponent implements OnInit {
     const instance = material.Modal.init(element);
   }
 
-  onSubmit() {
-    return this.http.post(this.API_URI, this.contact).toPromise()
-      .then(req => {
-        console.log(req);
-        this.contact.email = '';
-        this.contact.message = '';
-      }).catch(err => {
-        if(err) {
-          console.error(err);
-        }
-      })
+  onSubmit(form: NgForm) {
+    if(form.invalid) { return; }
+    this.sendOpinion.postOpinion(this.contact).subscribe( data => {
+      this.contact = data;
+      console.log(data);
+    })
   }
 
 }
